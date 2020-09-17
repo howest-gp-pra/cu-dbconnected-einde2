@@ -1,0 +1,22 @@
+﻿<Window x:Class="Pra.DBConnected.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pra.DBConnected.WPF"
+        mc:Ignorable="d"
+        Title="BIBLIOTHEEK" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem x:Name="mnuAuteur" Header="_Auteurs" Click="mnuAuteur_Click"  />
+                <MenuItem x:Name="mnuCategorie" Header="_Categoriën" Click="mnuCategorie_Click" />
+                <MenuItem x:Name="mnuUitgever" Header="_Uitgevers" Click="mnuUitgever_Click" />
+                <MenuItem x:Name="mnuKlant" Header="_Klanten" Click="mnuKlant_Click" />
+                <MenuItem x:Name="mnuStop" Header="_Einde" Click="mnuStop_Click" />
+
+            </Menu>
+            <StackPanel x:Name="paneel"/>
+        </DockPanel>
+        <Label Content="Opgepast : open helper klasse en pas connectiestring nog aan !" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.425,0.505" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Background="#FFF51818" FontSize="22"/>
+    </Grid></Window>
