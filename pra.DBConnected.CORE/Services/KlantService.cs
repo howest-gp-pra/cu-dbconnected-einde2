@@ -72,10 +72,7 @@ namespace Pra.DBConnected.CORE.Services
 			sql += " where klant_id = " + klant.Klant_ID.ToString();
 			if (DBConnector.ExecuteCommand(sql))
 			{
-				// pas de klant in de List aan
-				int positie = klanten.FindIndex(zoek => zoek.Klant_ID == klant.Klant_ID);
-				klanten[positie].KlantNaam = klant.KlantNaam;
-				klanten[positie].Plaats = klant.Plaats;
+
 				// sorteer de List opnieuw op klantnaam
 				klanten = klanten.OrderBy(sorteerklant => sorteerklant.KlantNaam).ToList();
 
