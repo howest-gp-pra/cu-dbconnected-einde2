@@ -21,12 +21,13 @@ namespace Pra.DBConnected.WPF
     /// </summary>
     public partial class WinCategorie : Window
     {
+        bool nieuweCategorie;
+
         public WinCategorie()
         {
             InitializeComponent();
         }
 
-        bool nieuweCategorie;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             VulDeCategorieen();
@@ -73,7 +74,7 @@ namespace Pra.DBConnected.WPF
             grpBewerken.IsEnabled = true;
             lstCategorieen.IsEnabled = false;
         }
-        private void lstCategorieen_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LstCategorieen_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (lstCategorieen.SelectedIndex >= 0)
             {
@@ -82,7 +83,7 @@ namespace Pra.DBConnected.WPF
                 txtcategorie.Text = Categorie.ZoekCategorie(cat_id);
             }
         }
-        private void btnNieuw_Click(object sender, RoutedEventArgs e)
+        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
         {
             grpBewerken.Header = "Een nieuwe categorie";
             nieuweCategorie = true;
@@ -90,7 +91,7 @@ namespace Pra.DBConnected.WPF
             txtcategorie.Text = "";
             txtcategorie.Focus();
         }
-        private void btnWijzig_Click(object sender, RoutedEventArgs e)
+        private void BtnWijzig_Click(object sender, RoutedEventArgs e)
         {
             if (lstCategorieen.SelectedIndex >= 0)
             {
@@ -100,13 +101,13 @@ namespace Pra.DBConnected.WPF
                 txtcategorie.Focus();
             }
         }
-        private void btnAnnuleren_Click(object sender, RoutedEventArgs e)
+        private void BtnAnnuleren_Click(object sender, RoutedEventArgs e)
         {
-            lstCategorieen_SelectionChanged(lstCategorieen, null);
+            LstCategorieen_SelectionChanged(lstCategorieen, null);
             ViewStandaard();
 
         }
-        private void btnBewaren_Click(object sender, RoutedEventArgs e)
+        private void BtnBewaren_Click(object sender, RoutedEventArgs e)
         {
             if (nieuweCategorie)
             {
@@ -134,7 +135,7 @@ namespace Pra.DBConnected.WPF
             }
             ViewStandaard();
         }
-        private void btnVerwijder_Click(object sender, RoutedEventArgs e)
+        private void BtnVerwijder_Click(object sender, RoutedEventArgs e)
         {
             if (lstCategorieen.SelectedIndex >= 0)
             {

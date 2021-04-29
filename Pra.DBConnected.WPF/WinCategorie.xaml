@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         Title="De categorieën" Height="422.252" Width="615.416" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lstCategorieen" HorizontalAlignment="Left" Height="342" Margin="26,26,0,0" VerticalAlignment="Top" Width="270" SelectionChanged="lstCategorieen_SelectionChanged"/>
+        <ListBox x:Name="lstCategorieen" HorizontalAlignment="Left" Height="342" Margin="26,26,0,0" VerticalAlignment="Top" Width="270" SelectionChanged="LstCategorieen_SelectionChanged"/>
         <GroupBox x:Name="grpKnoppen" Header="Bewerken" HorizontalAlignment="Left" Height="59" Margin="324,26,0,0" VerticalAlignment="Top" Width="262">
             <Grid>
-                <Button x:Name="btnNieuw" Content="Nieuw" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btnNieuw_Click"/>
-                <Button x:Name="btnWijzig" Content="Wijzig" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="75" Click="btnWijzig_Click"/>
-                <Button x:Name="btnVerwijder" Content="Verwijder" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="75" Click="btnVerwijder_Click"/>
+                <Button x:Name="btnNieuw" Content="Nieuw" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnNieuw_Click"/>
+                <Button x:Name="btnWijzig" Content="Wijzig" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnWijzig_Click"/>
+                <Button x:Name="btnVerwijder" Content="Verwijder" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnVerwijder_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox x:Name="grpBewerken" Header="Nieuwe categorie" HorizontalAlignment="Left" Height="90" Margin="324,109,0,0" VerticalAlignment="Top" Width="262">
             <Grid>
-                <Button x:Name="btnBewaren" Content="Bewaren" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="75" Click="btnBewaren_Click"/>
-                <Button x:Name="btnAnnuleren" Content="Annuleren" HorizontalAlignment="Left" Margin="102,41,0,0" VerticalAlignment="Top" Width="75" Click="btnAnnuleren_Click"/>
+                <Button x:Name="btnBewaren" Content="Bewaren" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="75" Click="BtnBewaren_Click"/>
+                <Button x:Name="btnAnnuleren" Content="Annuleren" HorizontalAlignment="Left" Margin="102,41,0,0" VerticalAlignment="Top" Width="75" Click="BtnAnnuleren_Click"/>
                 <TextBox x:Name="txtcategorie" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230"/>
             </Grid>
         </GroupBox>

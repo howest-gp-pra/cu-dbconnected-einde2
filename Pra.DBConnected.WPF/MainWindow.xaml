@@ -9,11 +9,11 @@
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
-                <MenuItem x:Name="mnuAuteur" Header="_Auteurs" Click="mnuAuteur_Click"  />
-                <MenuItem x:Name="mnuCategorie" Header="_Categoriën" Click="mnuCategorie_Click" />
-                <MenuItem x:Name="mnuUitgever" Header="_Uitgevers" Click="mnuUitgever_Click" />
-                <MenuItem x:Name="mnuKlant" Header="_Klanten" Click="mnuKlant_Click" />
-                <MenuItem x:Name="mnuStop" Header="_Einde" Click="mnuStop_Click" />
+                <MenuItem x:Name="mnuAuteur" Header="_Auteurs" Click="MnuAuteur_Click"  />
+                <MenuItem x:Name="mnuCategorie" Header="_Categoriën" Click="MnuCategorie_Click" />
+                <MenuItem x:Name="mnuUitgever" Header="_Uitgevers" Click="MnuUitgever_Click" />
+                <MenuItem x:Name="mnuKlant" Header="_Klanten" Click="MnuKlant_Click" />
+                <MenuItem x:Name="mnuStop" Header="_Einde" Click="MnuStop_Click" />
 
             </Menu>
             <StackPanel x:Name="paneel"/>

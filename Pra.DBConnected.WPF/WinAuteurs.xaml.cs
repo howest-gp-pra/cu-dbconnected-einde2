@@ -19,11 +19,12 @@ namespace Pra.DBConnected.WPF
     /// </summary>
     public partial class WinAuteurs : Window
     {
+        bool nieuweAuteur;
+
         public WinAuteurs()
         {
             InitializeComponent();
         }
-        bool nieuweAuteur;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             VulDeAuteurs();
@@ -46,17 +47,7 @@ namespace Pra.DBConnected.WPF
                 lstAuteurs.Items.Add(itm);
             }
         }
-        //private void btnSortAsc_Click(object sender, RoutedEventArgs e)
-        //{
-        //    VulDeAuteurs(Enumeraties.SortOrder.ASC);
 
-        //}
-
-        //private void btnSortDesc_Click(object sender, RoutedEventArgs e)
-        //{
-        //    VulDeAuteurs(Enumeraties.SortOrder.DESC);
-
-        //}
         private void ViewStandaard()
         {
             grpKnoppen.IsEnabled = true;
@@ -71,7 +62,7 @@ namespace Pra.DBConnected.WPF
             lstAuteurs.IsEnabled = false;
         }
 
-        private void lstAuteurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LstAuteurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (lstAuteurs.SelectedIndex >= 0)
             {
@@ -83,7 +74,7 @@ namespace Pra.DBConnected.WPF
 
 
 
-        private void btnNieuw_Click(object sender, RoutedEventArgs e)
+        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
         {
             grpBewerken.Header = "Een nieuwe auteur";
             nieuweAuteur = true;
@@ -92,7 +83,7 @@ namespace Pra.DBConnected.WPF
             txtNaam.Focus();
         }
 
-        private void btnWijzig_Click(object sender, RoutedEventArgs e)
+        private void BtnWijzig_Click(object sender, RoutedEventArgs e)
         {
             if (lstAuteurs.SelectedIndex >= 0)
             {
@@ -102,12 +93,12 @@ namespace Pra.DBConnected.WPF
                 txtNaam.Focus();
             }
         }
-        private void btnAnnuleren_Click(object sender, RoutedEventArgs e)
+        private void BtnAnnuleren_Click(object sender, RoutedEventArgs e)
         {
-            lstAuteurs_SelectionChanged(lstAuteurs, null);
+            LstAuteurs_SelectionChanged(lstAuteurs, null);
             ViewStandaard();
         }
-        private void btnBewaren_Click(object sender, RoutedEventArgs e)
+        private void BtnBewaren_Click(object sender, RoutedEventArgs e)
         {
             if (nieuweAuteur)
             {
@@ -135,7 +126,7 @@ namespace Pra.DBConnected.WPF
             }
             ViewStandaard();
         }
-        private void btnVerwijder_Click(object sender, RoutedEventArgs e)
+        private void BtnVerwijder_Click(object sender, RoutedEventArgs e)
         {
             if (lstAuteurs.SelectedIndex >= 0)
             {

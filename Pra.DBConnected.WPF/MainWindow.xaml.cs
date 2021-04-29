@@ -24,30 +24,30 @@ namespace Pra.DBConnected.WPF
         {
             InitializeComponent();
         }
-        private void mnuStop_Click(object sender, RoutedEventArgs e)
+        private void MnuStop_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void mnuAuteur_Click(object sender, RoutedEventArgs e)
+        private void MnuAuteur_Click(object sender, RoutedEventArgs e)
         {
             WinAuteurs kind = new WinAuteurs();
             kind.ShowDialog();
         }
 
-        private void mnuCategorie_Click(object sender, RoutedEventArgs e)
+        private void MnuCategorie_Click(object sender, RoutedEventArgs e)
         {
             WinCategorie venster = new WinCategorie();
             venster.ShowDialog();
         }
 
-        private void mnuUitgever_Click(object sender, RoutedEventArgs e)
+        private void MnuUitgever_Click(object sender, RoutedEventArgs e)
         {
             WinUitgevers venster = new WinUitgevers();
             venster.ShowDialog();
         }
 
-        private void mnuKlant_Click(object sender, RoutedEventArgs e)
+        private void MnuKlant_Click(object sender, RoutedEventArgs e)
         {
             WinKlanten venster = new WinKlanten();
             venster.ShowDialog();

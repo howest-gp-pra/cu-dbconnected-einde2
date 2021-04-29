@@ -21,12 +21,14 @@ namespace Pra.DBConnected.WPF
     /// </summary>
     public partial class WinKlanten : Window
     {
+        bool nieuweKlant;
+        KlantService klantService;
+
         public WinKlanten()
         {
             InitializeComponent();
         }
-        bool nieuweKlant;
-        KlantService klantService;
+        
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -48,7 +50,7 @@ namespace Pra.DBConnected.WPF
             lstKlanten.IsEnabled = false;
         }
 
-        private void lstKlanten_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LstKlanten_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             txtKlantnaam.Text = "";
             txtPlaats.Text = "";
@@ -60,7 +62,7 @@ namespace Pra.DBConnected.WPF
             }
         }
 
-        private void btnNieuw_Click(object sender, RoutedEventArgs e)
+        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
         {
             grpBewerken.Header = "Een nieuwe klant";
             nieuweKlant = true;
@@ -70,7 +72,7 @@ namespace Pra.DBConnected.WPF
             txtKlantnaam.Focus();
         }
 
-        private void btnWijzig_Click(object sender, RoutedEventArgs e)
+        private void BtnWijzig_Click(object sender, RoutedEventArgs e)
         {
             if (lstKlanten.SelectedIndex >= 0)
             {
@@ -81,13 +83,13 @@ namespace Pra.DBConnected.WPF
             }
         }
 
-        private void btnAnnuleren_Click(object sender, RoutedEventArgs e)
+        private void BtnAnnuleren_Click(object sender, RoutedEventArgs e)
         {
-            lstKlanten_SelectionChanged(lstKlanten, null);
+            LstKlanten_SelectionChanged(lstKlanten, null);
             ViewStandaard();
         }
 
-        private void btnBewaren_Click(object sender, RoutedEventArgs e)
+        private void BtnBewaren_Click(object sender, RoutedEventArgs e)
         {
             if(nieuweKlant)
             {
@@ -142,7 +144,7 @@ namespace Pra.DBConnected.WPF
 
         }
 
-        private void btnVerwijder_Click(object sender, RoutedEventArgs e)
+        private void BtnVerwijder_Click(object sender, RoutedEventArgs e)
         {
             if(MessageBox.Show("Zeker?","Klant wissen", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
             {

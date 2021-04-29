@@ -19,11 +19,12 @@ namespace Pra.DBConnected.WPF
     /// </summary>
     public partial class WinUitgevers : Window
     {
+        bool nieuweUitgever;
+
         public WinUitgevers()
         {
             InitializeComponent();
         }
-        bool nieuweUitgever;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -56,7 +57,7 @@ namespace Pra.DBConnected.WPF
             grpBewerken.IsEnabled = true;
             lstUitgevers.IsEnabled = false;
         }
-        private void lstUitgevers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LstUitgevers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (lstUitgevers.SelectedIndex >= 0)
             {
@@ -66,7 +67,7 @@ namespace Pra.DBConnected.WPF
             }
         }
 
-        private void btnNieuw_Click(object sender, RoutedEventArgs e)
+        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
         {
             grpBewerken.Header = "Een nieuwe uitgever";
             nieuweUitgever = true;
@@ -75,7 +76,7 @@ namespace Pra.DBConnected.WPF
             txtUitgever.Focus();
         }
 
-        private void btnWijzig_Click(object sender, RoutedEventArgs e)
+        private void BtnWijzig_Click(object sender, RoutedEventArgs e)
         {
             if (lstUitgevers.SelectedIndex >= 0)
             {
@@ -85,12 +86,12 @@ namespace Pra.DBConnected.WPF
                 txtUitgever.Focus();
             }
         }
-        private void btnAnnuleren_Click(object sender, RoutedEventArgs e)
+        private void BtnAnnuleren_Click(object sender, RoutedEventArgs e)
         {
-            lstUitgevers_SelectionChanged(lstUitgevers, null);
+            LstUitgevers_SelectionChanged(lstUitgevers, null);
             ViewStandaard();
         }
-        private void btnBewaren_Click(object sender, RoutedEventArgs e)
+        private void BtnBewaren_Click(object sender, RoutedEventArgs e)
         {
             if (nieuweUitgever)
             {
@@ -118,7 +119,7 @@ namespace Pra.DBConnected.WPF
             }
             ViewStandaard();
         }
-        private void btnVerwijder_Click(object sender, RoutedEventArgs e)
+        private void BtnVerwijder_Click(object sender, RoutedEventArgs e)
         {
             if (lstUitgevers.SelectedIndex >= 0)
             {
