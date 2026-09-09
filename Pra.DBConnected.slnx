@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="pra.DBConnected.CORE/Pra.DBConnected.CORE.csproj" />
+  <Project Path="Pra.DBConnected.WPF/Pra.DBConnected.WPF.csproj" />
+</Solution>
